@@ -1,12 +1,12 @@
-import { Text, View } from "react-native";
-
+import { Container } from "./styles";
 import React from "react";
+import { Text } from "react-native";
 
 const Home = () => {
   return (
-    <View>
+    <Container>
       <Text>Hola mundo</Text>
-    </View>
+    </Container>
   );
 };
 
