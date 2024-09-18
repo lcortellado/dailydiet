@@ -5,14 +5,16 @@ export const Container = styled.View`
 width: 100%;
 flex-direction: row;
 align-items: center;
-margin-vertical: 66px 
+margin-top: 66px;
+margin-bottom: 30px;
 `;
 
 export const BackButtonContainer = styled.View`
 width: 100%;
 flex-direction: row;
 align-items: center;
-margin-vertical: 56px 
+margin-top: 56px;
+margin-bottom: 30px;
 `;
 
 export const LogoContainer = styled.View`

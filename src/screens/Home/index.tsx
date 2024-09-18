@@ -1,12 +1,21 @@
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
+
 import { Header } from "@components/Header";
+import { Highlight } from "@components/Highlight";
 import React from "react";
-import { Text } from "react-native";
 
 const Home = () => {
   return (
     <Container>
       <Header />
+      <Content>
+        <Highlight
+          backgroundColor="GREEN_LIGHT"
+          title="90,86%"
+          subtitle="das refeições dentro da dieta"
+          showButtonIcon
+        />
+      </Content>
     </Container>
   );
 };
