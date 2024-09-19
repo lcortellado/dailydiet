@@ -1,9 +1,10 @@
-import { ButtonIconTypeStyleProps, Container, Icon } from "./styles";
+import { Container, Icon } from "./styles";
 
 import { TouchableOpacityProps } from "react-native";
+import { TypeStyleProps } from "@components/IconComponent/styles";
 
 type Props = TouchableOpacityProps & {
-  type: ButtonIconTypeStyleProps;
+  type: TypeStyleProps;
 };
 
 export function ButtonIcon({ type }: Props) {

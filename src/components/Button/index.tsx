@@ -9,12 +9,19 @@ type Props = TouchableOpacityProps & {
   label: string;
   iconName?: IconNames;
   isShowIcon?: boolean;
+  iconColorType?: TypeStyleProps;
 };
 
-export function Button({ type, label, iconName, isShowIcon = false }: Props) {
+export function Button({
+  type,
+  label,
+  iconName,
+  isShowIcon = false,
+  iconColorType,
+}: Props) {
   return (
     <Container type={type}>
-      {isShowIcon && <IconComponent iconName={iconName} type={type} />}
+      {isShowIcon && <IconComponent iconName={iconName} type={iconColorType} />}
 
       <Label>{label}</Label>
     </Container>

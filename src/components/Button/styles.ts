@@ -12,7 +12,7 @@ flex: 1;
 flex-direction: row;
 min-height: 56px;
 max-height: 56px;
-background-color: ${({theme, type}) => type === 'PRIMARY' ? theme.COLORS.GRAY_700 : theme.COLORS.GRAY_200 };
+background-color: ${({theme, type}) => type === 'PRIMARY' ? theme.COLORS.GRAY_600 : theme.COLORS.GRAY_200 };
 border-radius: 6px;
 border-width: ${({type}) => type === "SECONDARY" ? 1 : 0}px;
 align-items: center;

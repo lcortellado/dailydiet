@@ -7,18 +7,21 @@ import {
 } from "./styles";
 
 import { ButtonIcon } from "@components/Buttonicon";
+import { TypeStyleProps } from "@components/IconComponent/styles";
 
 type Props = {
   title: string;
   subtitle?: string;
   showButtonIcon?: boolean;
   backgroundColor: ContentComponentStyleProps;
+  type: TypeStyleProps;
 };
 export function Highlight({
   title,
   subtitle,
   showButtonIcon = false,
   backgroundColor,
+  type,
 }: Props) {
   return (
     <Container backgroundColor={backgroundColor}>
@@ -26,7 +29,7 @@ export function Highlight({
         <Title>{title}</Title>
         <SubTitle>{subtitle}</SubTitle>
       </Content>
-      {showButtonIcon && <ButtonIcon type="SECONDARY" />}
+      {showButtonIcon && <ButtonIcon type={type} />}
     </Container>
   );
 }

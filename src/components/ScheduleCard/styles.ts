@@ -1,14 +1,13 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-flex: 1;
 flex-direction: row;
 border-width: 1px;
 border-radius: 6px;
-max-height: 49px;
-margin-vertical: 8px;
+margin-vertical: 5px;
 border-color: ${({theme}) => theme.COLORS.GRAY_300};
 align-items: center;
+min-height: 49px;
 `
 export const TimeContainer = styled.View`
 border-right-width: 1px;
