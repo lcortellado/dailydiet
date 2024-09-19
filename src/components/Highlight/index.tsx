@@ -6,7 +6,7 @@ import {
   Title,
 } from "./styles";
 
-import { ButtonIcon } from "@components/ButtonIcon";
+import { ButtonIcon } from "@components/Buttonicon";
 
 type Props = {
   title: string;

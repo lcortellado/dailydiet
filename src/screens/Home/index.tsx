@@ -1,5 +1,6 @@
 import { Container, Content } from "./styles";
 
+import { Button } from "@components/Button";
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import React from "react";
@@ -16,6 +17,7 @@ const Home = () => {
           showButtonIcon
         />
       </Content>
+      <Button type="PRIMARY" label="Nova refeição" iconName="Plus" isShowIcon />
     </Container>
   );
 };
