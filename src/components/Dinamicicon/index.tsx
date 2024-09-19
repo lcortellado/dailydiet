@@ -1,4 +1,3 @@
-import { ButtonTypeStyleProps, IconNames } from "@components/Button/styles";
 import {
   Circle,
   IconProps,
@@ -6,6 +5,7 @@ import {
   Plus,
   Trash,
 } from "phosphor-react-native";
+import { IconNames, TypeStyleProps } from "@components/IconComponent/styles";
 
 import React from "react";
 
@@ -18,7 +18,7 @@ const iconMap = {
 
 type IconComponentProps = {
   icon: IconNames;
-  type: ButtonTypeStyleProps;
+  type: TypeStyleProps;
 } & IconProps;
 
 export const DinamicIcon: React.FC<IconComponentProps> = ({

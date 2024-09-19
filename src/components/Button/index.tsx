@@ -1,15 +1,11 @@
-import {
-  ButtonTypeStyleProps,
-  Container,
-  Icon,
-  IconNames,
-  Label,
-} from "./styles";
+import { Container, Label } from "./styles";
+import { IconNames, TypeStyleProps } from "@components/IconComponent/styles";
 
+import { IconComponent } from "@components/IconComponent";
 import { TouchableOpacityProps } from "react-native";
 
 type Props = TouchableOpacityProps & {
-  type: ButtonTypeStyleProps;
+  type: TypeStyleProps;
   label: string;
   iconName?: IconNames;
   isShowIcon?: boolean;
@@ -18,7 +14,7 @@ type Props = TouchableOpacityProps & {
 export function Button({ type, label, iconName, isShowIcon = false }: Props) {
   return (
     <Container type={type}>
-      {isShowIcon && <Icon icon={iconName} type={type} />}
+      {isShowIcon && <IconComponent iconName={iconName} type={type} />}
 
       <Label>{label}</Label>
     </Container>

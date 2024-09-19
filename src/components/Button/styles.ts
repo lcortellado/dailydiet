@@ -1,15 +1,10 @@
-import { ArrowUpRight, Circle, IconProps, PencilLine, Plus, Trash } from "phosphor-react-native"
-
-import { DinamicIcon } from "@components/Dinamicicon";
+import { IconProps } from "phosphor-react-native"
 import { TouchableOpacity } from "react-native"
+import { TypeStyleProps } from "@components/IconComponent/styles";
 import styled from "styled-components/native"
 
-export type ButtonTypeStyleProps =  'PRIMARY' | 'SECONDARY'
-export type IconNames = 'PencilLine' | 'Trash' | 'Plus' | 'Circle'
-
 type Props = {
-    type: ButtonTypeStyleProps
-    icon?: IconNames
+    type: TypeStyleProps
 } & IconProps
 
 export const Container = styled(TouchableOpacity)<Props>`
@@ -24,11 +19,6 @@ align-items: center;
 justify-content: center;
 gap: 16px;
 ` 
-  export const Icon = styled(DinamicIcon).attrs<Props>(({ theme, type }) => ({
-    size: 18,
-    color: type === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_DARK,
-  }))``;
-
 export const Label = styled.Text`
 font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
 font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
