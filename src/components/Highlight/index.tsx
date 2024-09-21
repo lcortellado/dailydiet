@@ -8,6 +8,7 @@ import {
 
 import { ButtonIcon } from "@components/Buttonicon";
 import { TypeStyleProps } from "@components/IconComponent/styles";
+import { useNavigation } from "@react-navigation/native";
 
 type Props = {
   title: string;

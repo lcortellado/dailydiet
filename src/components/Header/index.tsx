@@ -12,6 +12,7 @@ import {
 
 import logoImg from "@assets/forkknife.png";
 import logoProfileImg from "@assets/logo-profile.png";
+import { useNavigation } from "@react-navigation/native";
 
 type Props = {
   showBackButton?: boolean;
@@ -19,11 +20,12 @@ type Props = {
 };
 
 export function Header({ showBackButton = false, backTitle }: Props) {
+  const { goBack } = useNavigation();
   return (
     <>
       {showBackButton ? (
         <BackButtonContainer>
-          <BackButton>
+          <BackButton onPress={() => goBack()}>
             <BackIcon />
           </BackButton>
           {BackTitle && <BackTitle>{backTitle}</BackTitle>}

@@ -8,8 +8,7 @@ type Props = {
 
 export const Container = styled.TouchableOpacity`
 padding-top: 8px;
-padding-right: 8px;
-height: 52px;
+height: 100%;
 `
 
 export const Icon = styled(ArrowUpRight).attrs<Props>(({theme, type}) => ({

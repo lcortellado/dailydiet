@@ -7,8 +7,7 @@ padding-left: 24px;
 padding-right: 24px;
 `
 export const Content = styled.View`
-height: 102px;
-margin-bottom: 30px;
+margin-bottom: 15px;
 `
 export const SectionListContainer = styled.View`
 margin-top: 20px;
