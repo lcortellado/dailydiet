@@ -1,6 +1,7 @@
 import { IconProps, IconWeight } from "phosphor-react-native";
 
 import { DinamicIcon } from "@components/Dinamicicon";
+import { getBackgroundColorSelected } from "../../utils/utils";
 import styled from "styled-components/native";
 
 export type TypeStyleProps =  'PRIMARY' | 'SECONDARY' | 'SUCCESS' | 'CANCEL'

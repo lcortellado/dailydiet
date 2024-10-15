@@ -1,3 +1,4 @@
+import { CreateSnack } from "@screens/CreateSnack";
 import Home from "@screens/Home";
 import { Statistic } from "@screens/Statistic";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -9,6 +10,7 @@ export function AppRoutes() {
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="home" component={Home} />
       <Screen name="statistic" component={Statistic} />
+      <Screen name="createSnack" component={CreateSnack} />
     </Navigator>
   );
 }

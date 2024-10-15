@@ -2,6 +2,7 @@ import { Container, Label } from "./styles";
 import { IconNames, TypeStyleProps } from "@components/IconComponent/styles";
 
 import { IconComponent } from "@components/IconComponent";
+import { IconWeight } from "phosphor-react-native";
 import { TouchableOpacityProps } from "react-native";
 
 type Props = TouchableOpacityProps & {
@@ -10,6 +11,9 @@ type Props = TouchableOpacityProps & {
   iconName?: IconNames;
   isShowIcon?: boolean;
   iconColorType?: TypeStyleProps;
+  onPress?: () => void;
+  color?: string;
+  iconWeight?: IconWeight;
 };
 
 export function Button({
@@ -18,12 +22,22 @@ export function Button({
   iconName,
   isShowIcon = false,
   iconColorType,
+  onPress,
+  color,
+  iconWeight,
 }: Props) {
+  console.log(type, "dddd");
   return (
-    <Container type={type}>
-      {isShowIcon && <IconComponent iconName={iconName} type={iconColorType} />}
+    <Container type={type} onPress={onPress}>
+      {isShowIcon && (
+        <IconComponent
+          iconName={iconName}
+          type={type}
+          iconWeight={iconWeight}
+        />
+      )}
 
-      <Label>{label}</Label>
+      <Label color={color}>{label}</Label>
     </Container>
   );
 }

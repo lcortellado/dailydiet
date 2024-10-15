@@ -13,6 +13,7 @@ import { Highlight } from "@components/Highlight";
 import React from "react";
 import { ScheduleCard } from "@components/ScheduleCard";
 import { SectionList } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
   {
@@ -78,6 +79,7 @@ const DATA = [
 ];
 
 const Home = () => {
+  const { navigate } = useNavigation();
   return (
     <Container>
       <Header />
@@ -97,6 +99,7 @@ const Home = () => {
           label="Nova refeição"
           iconName="Plus"
           isShowIcon
+          onPress={() => navigate("createSnack")}
         />
       </AddNewItemContainer>
 
