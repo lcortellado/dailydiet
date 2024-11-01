@@ -26,7 +26,6 @@ export function Button({
   color,
   iconWeight,
 }: Props) {
-  console.log(type, "dddd");
   return (
     <Container type={type} onPress={onPress}>
       {isShowIcon && (

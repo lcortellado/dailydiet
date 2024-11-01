@@ -42,6 +42,9 @@ export function CreateSnack() {
       };
 
       snackCreate(newSnack);
+      setName("");
+      setDescription("");
+      setIsDiet(null);
     } catch (e) {
       console.error("Error al guardar la entrada:", e);
     }
@@ -54,9 +57,9 @@ export function CreateSnack() {
       </HeaderContainer>
       <Content>
         <InputLabel>Nome</InputLabel>
-        <Input />
+        <Input onChangeText={setName} value={name} />
         <InputLabel>Descrição</InputLabel>
-        <Input multiline />
+        <Input onChangeText={setDescription} value={description} multiline />
         <DateContent>
           <InputDateContainer>
             <InputLabel>Data</InputLabel>
@@ -107,6 +110,7 @@ export function CreateSnack() {
             isShowIcon
             iconWeight="fill"
             color="#1B1D1E"
+            onPress={() => setIsDiet(true)}
           />
           <Button
             label="No"
@@ -115,6 +119,7 @@ export function CreateSnack() {
             isShowIcon
             color="#1B1D1E"
             iconWeight="fill"
+            onPress={() => setIsDiet(false)}
           />
         </DateContent>
       </Content>

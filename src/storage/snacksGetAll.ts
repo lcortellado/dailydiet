@@ -7,8 +7,8 @@ export async function snackGetAll() {
    const storage = await AsyncStorage.getItem(SNACK_LIST)
 
    const snacksList: SnackProps[] = storage ? JSON.parse(storage) : []
-console.log(snacksList, 'snackList')
-   return snacksList
+
+   return snacksList 
     
    } catch (error) {
     throw error

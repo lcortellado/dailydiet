@@ -6,9 +6,10 @@ import { snackGetAll } from "./snacksGetAll"
 export async function snackCreate(newSnacks: SnackProps) {
    try {
       const storedGroups = await snackGetAll()
-console.log(storedGroups, 'storage group')
-    const storage = JSON.stringify([...storedGroups, snackCreate])
-     await AsyncStorage.setItem(SNACK_LIST, JSON.stringify(storage))
+
+      const storage = JSON.stringify([...storedGroups, newSnacks])
+      
+     await AsyncStorage.setItem(SNACK_LIST, storage)
     
    } catch (error) {
     throw error
